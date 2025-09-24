@@ -1,0 +1,13 @@
+fun main(args: Array<String>) {
+    if (args.isEmpty()) {
+        println("Por favor ingresa un número en Program arguments (ejemplo: 5)")
+        return
+    }
+
+    val n = args[0].toInt()
+    println("El factorial de $n es: ${factorial(n)}")
+}
+
+fun factorial(n: Int): Int {
+    return if (n <= 1) 1 else n * factorial(n - 1)
+}
