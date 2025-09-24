@@ -1,0 +1,15 @@
+fun main(args: Array<String>) {
+    if (args.size < 2) {
+        println("Por favor ingresa dos números en Program arguments (ejemplo: 48 18)")
+        return
+    }
+
+    val a = args[0].toInt()
+    val b = args[1].toInt()
+
+    println("El MCD de $a y $b es: ${mcd(a, b)}")
+}
+
+fun mcd(a: Int, b: Int): Int {
+    return if (b == 0) a else mcd(b, a % b)
+}
